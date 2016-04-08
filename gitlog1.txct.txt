@@ -1,0 +1,234 @@
+
+hammerfrail@i6rootPC ~
+$ cd hammerfrail
+-bash: cd: hammerfrail: No such file or directory
+
+hammerfrail@i6rootPC ~
+$ cd $HOME/hammerfrail
+-bash: cd: /home/hammerfrail/hammerfrail: No such file or directory
+
+hammerfrail@i6rootPC ~
+$ cd $HOMe
+
+hammerfrail@i6rootPC ~
+$ cd $HOME
+
+hammerfrail@i6rootPC ~
+$ cd awesome
+
+hammerfrail@i6rootPC ~/awesome
+$ git init
+Initialized empty Git repository in /home/hammerfrail/awesome/.git/
+
+hammerfrail@i6rootPC ~/awesome
+$ echo
+
+
+hammerfrail@i6rootPC ~/awesome
+$ echo "This is my first Github." > README
+
+hammerfrail@i6rootPC ~/awesome
+$ git add README
+
+hammerfrail@i6rootPC ~/awesome
+$  commit -m 'first commit'
+-bash: commit: コマンドが見つかりません
+
+hammerfrail@i6rootPC ~/awesome
+$ git commit -m 'first commit'
+[master (root-commit) 6a3f43b] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin git@github.com:https://github.com/kosukehama/Hello.git
+
+hammerfrail@i6rootPC ~/awesome
+$ git push origin master
+fatal: I don't handle protocol 'git@github.com:https'
+
+hammerfrail@i6rootPC ~/awesome
+$ cd
+
+hammerfrail@i6rootPC ~
+$ ssh-keyhen -t rsa -C "acro_shachi@yahoo.co.jp"
+-bash: ssh-keyhen: コマンドが見つかりません
+
+hammerfrail@i6rootPC ~
+$ ssh-keygen -t rsa -C "acro_shachi@yahoo.co.jp"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/hammerfrail/.ssh/id_rsa):
+Created directory '/home/hammerfrail/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/hammerfrail/.ssh/id_rsa.
+Your public key has been saved in /home/hammerfrail/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:kOgs+4PGsU+qmRCfiNxba+rlr4nUrfXNntLY/nXV5SE acro_shachi@yahoo.co.jp
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|     . .         |
+|    . o      E ..|
+|   o   .      ..+|
+|. . o   S       +|
+|o+o+. .         .|
+|+o+*.+ o  +    ..|
+|.o*+B.= .ooo. . .|
+|+oo*=Bo. .+*..   |
++----[SHA256]-----+
+
+hammerfrail@i6rootPC ~
+$ eval 'ssh-agent'
+SSH_AUTH_SOCK=/tmp/ssh-zfFhe3fHYZrX/agent.7844; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=8792; export SSH_AGENT_PID;
+echo Agent pid 8792;
+
+hammerfrail@i6rootPC ~
+$ ssh-add $HOME/hammerfrail/.ssh/id_rsa:
+Could not open a connection to your authentication agent.
+
+hammerfrail@i6rootPC ~
+$ ssh-add .ssh/id_rsa:
+Could not open a connection to your authentication agent.
+
+hammerfrail@i6rootPC ~
+$ ssh-add $HOME/hammerfrail/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+hammerfrail@i6rootPC ~
+$ ssh-add hammerfrail/.ssh/id_rsa
+Could not open a connection to your authentication agent.
+
+hammerfrail@i6rootPC ~
+$ ssh-add
+Could not open a connection to your authentication agent.
+
+hammerfrail@i6rootPC ~
+$ eval `ssh-agent`
+Agent pid 9356
+
+hammerfrail@i6rootPC ~
+$ ssh-add $HOME/hammerfrail/.ssh/id_rsa
+/home/hammerfrail/hammerfrail/.ssh/id_rsa: No such file or directory
+
+hammerfrail@i6rootPC ~
+$ ssh-add $home/hammerfrail/.ssh/id_rsa
+/hammerfrail/.ssh/id_rsa: No such file or directory
+
+hammerfrail@i6rootPC ~
+$ ssh-add .ssh/id_rsa
+Enter passphrase for .ssh/id_rsa:
+Identity added: .ssh/id_rsa (.ssh/id_rsa)
+
+hammerfrail@i6rootPC ~
+$ git push  origin maste
+fatal: Not a git repository (or any of the parent directories): .git
+
+hammerfrail@i6rootPC ~
+$ git push  origin master
+fatal: Not a git repository (or any of the parent directories): .git
+
+hammerfrail@i6rootPC ~
+$ cd awesome
+
+hammerfrail@i6rootPC ~/awesome
+$ git push  origin master
+fatal: I don't handle protocol 'git@github.com:https'
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin https://github.com/kosukehama/Hello.git
+fatal: remote origin already exists.
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin git@github.com:kosukehama/Hello.git
+fatal: remote origin already exists.
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin -k
+error: unknown switch `k'
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+hammerfrail@i6rootPC ~/awesome
+$ git init
+Reinitialized existing Git repository in /home/hammerfrail/awesome/.git/
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin git@github.com:kosukehama/Hello.git
+fatal: remote origin already exists.
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin git@github.com:kosukehama/Hello.gi
+fatal: remote origin already exists.
+
+hammerfrail@i6rootPC ~/awesome
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test02.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hammerfrail@i6rootPC ~/awesome
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+hammerfrail@i6rootPC ~/awesome
+$ git checkout
+
+hammerfrail@i6rootPC ~/awesome
+$ git init
+Reinitialized existing Git repository in /home/hammerfrail/awesome/.git/
+
+hammerfrail@i6rootPC ~/awesome
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test02.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin https://github.com/hammerfrail/first_app.git
+fatal: remote origin already exists.
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote rm origin
+
+hammerfrail@i6rootPC ~/awesome
+$ git remote add origin git@github.com:kosukehama/Hello.git
+
+hammerfrail@i6rootPC ~/awesome
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.252.123)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? n
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.252.123' (RSA) to the list of known hosts.
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 235 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:kosukehama/Hello.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+hammerfrail@i6rootPC ~/awesome
+$
