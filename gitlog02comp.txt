@@ -1,0 +1,44 @@
+
+hammerfrail@i6rootPC ~
+$ git clone git@github.com:kosukehama/Hello.git
+Cloning into 'Hello'...
+Warning: Permanently added the RSA host key for IP address '192.30.252.131' to the list of known hosts.
+Enter passphrase for key '/home/hammerfrail/.ssh/id_rsa':
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+Checking connectivity... done.
+
+hammerfrail@i6rootPC ~
+$ ls
+]  awesome  Hello  README
+
+hammerfrail@i6rootPC ~
+$ cd Hello
+
+hammerfrail@i6rootPC ~/Hello
+$ cugstart
+-bash: cugstart: コマンドが見つかりません
+
+hammerfrail@i6rootPC ~/Hello
+$ cygstart .
+
+hammerfrail@i6rootPC ~/Hello
+$ git add .
+
+hammerfrail@i6rootPC ~/Hello
+$ git commit -m ファイル入力
+[master e7fddc1] ファイル入力
+ 1 file changed, 234 insertions(+)
+ create mode 100755 gitlog1.txct.txt
+
+hammerfrail@i6rootPC ~/Hello
+$ git push orignal master
+fatal: 'orignal' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+hammerfrail@i6rootPC ~/Hello
